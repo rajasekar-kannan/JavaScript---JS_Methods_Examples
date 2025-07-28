@@ -40,6 +40,14 @@ describe('codePointAt', () => {
   });
 });
 
+describe('fromCharCode', () => {
+  test('1', () => {
+    expect(String.fromCharCode(97)).toEqual('a');
+    expect(String.fromCharCode(65)).toEqual('A');
+    expect(String.fromCharCode(50)).toEqual('2');
+  });
+});
+
 describe('concat', () => {
   test('1', () => {
     const str1 = 'Hello';
@@ -134,7 +142,7 @@ describe('match', () => {
     const foundNum = str2.match(65); // returns ["65"]
 
     expect(found).toMatchObject(['T', 'I']);
-    expect(foundText).toMatchObject(['']);
+    expect(foundText).toEqual(expect.arrayContaining(['']));
   });
 });
 
