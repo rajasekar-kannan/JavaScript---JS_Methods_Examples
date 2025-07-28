@@ -233,7 +233,7 @@ describe('getWonPropertyDescriptor', () => {
 
 describe('getPrototypeOf', () => {
   // The Object.getPrototypeOf() method returns the prototype
-  test.only('1', () => {
+  test('1', () => {
     const prototype1 = {};
     const obj1 = Object.create(prototype1);
     expect(Object.getPrototypeOf(obj1)).toEqual(prototype1);

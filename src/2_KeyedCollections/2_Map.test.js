@@ -25,7 +25,7 @@ describe('Map', () => {
     map.delete('b');
     expect(map.size).toEqual(2);
 
-    map['e'] = 5;
+    map.set('e', 5);
     expect(map.get('e')).toEqual(5);
 
     expect(map.has('e')).toEqual(true);
